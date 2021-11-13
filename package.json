@@ -3,4 +3,5 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-
+    "serve": "vue-cli-service serve",
+    "buil
