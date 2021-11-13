@@ -7,4 +7,5 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "core-js":
+    "core-js": "^3.8.3",
+    "material-design-icon
