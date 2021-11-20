@@ -10,4 +10,5 @@
     "core-js": "^3.8.3",
     "material-design-icons": "^3.0.1",
     "material-design-icons-iconfont": "^5.0.1",
-    "vue"
+    "vue": "^2.6.12",
+    "vue-router": "^3.4.
