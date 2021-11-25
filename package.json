@@ -16,4 +16,5 @@
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-ba
+    "@vue/cli-plugin-babel": "^4.5.11",
+    "@vue/cli-service
