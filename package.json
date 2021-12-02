@@ -21,4 +21,5 @@
     "sass": "^1.32.5",
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-vuetify": "^2.1.0",
-    "vue-template-co
+    "vue-template-compiler": "^2.6.12",
+    "vue
