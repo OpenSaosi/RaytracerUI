@@ -20,4 +20,5 @@
     "@vue/cli-service": "^4.5.4",
     "sass": "^1.32.5",
     "sass-loader": "^8.0.2",
-    "vue-cli-plugin-vuetify"
+    "vue-cli-plugin-vuetify": "^2.1.0",
+    "vue-template-co
