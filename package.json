@@ -27,4 +27,6 @@
   },
   "browserslist": [
     "> 1%",
-    "l
+    "last 2 versions"
+  ]
+}
