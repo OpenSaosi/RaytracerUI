@@ -10,4 +10,5 @@
 
         <v-spacer></v-spacer>
 
-        <v-btn href="https://github.com/fintechee/nonmql" target="_blank" t
+        <v-btn href="https://github.com/fintechee/nonmql" target="_blank" text>
+            <span class="mr
