@@ -11,4 +11,5 @@
         <v-spacer></v-spacer>
 
         <v-btn href="https://github.com/fintechee/nonmql" target="_blank" text>
-            <span class="mr-2" style="font-size:12px;font
+            <span class="mr-2" style="font-size:12px;font-weight:600">
+                Gith
