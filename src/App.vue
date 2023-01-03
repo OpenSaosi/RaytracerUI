@@ -19,4 +19,5 @@
     </v-app-bar>-->
 
     <v-content>
-      
+        <HelloWorld />
+    </v-content>
