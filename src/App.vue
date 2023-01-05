@@ -23,4 +23,5 @@
     </v-content>
 
     <v-footer padless>
-        <v-col class="text-center" cols="12
+        <v-col class="text-center" cols="12" style="font-size:12px">
+      
