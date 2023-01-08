@@ -24,4 +24,6 @@
 
     <v-footer padless>
         <v-col class="text-center" cols="12" style="font-size:12px">
-            © 2013 - 2021 — <strong>NON MQL</strong> <a href="https://www.fintechee.com">Fintechee Expert Advisor
+            © 2013 - 2021 — <strong>NON MQL</strong> <a href="https://www.fintechee.com">Fintechee Expert Advisor Studio</a>
+        </v-col>
+    </v-footer
