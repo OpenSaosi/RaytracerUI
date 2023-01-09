@@ -31,4 +31,4 @@
 </template>
 
 <script>
-i
+import HelloWorld from './components/H
