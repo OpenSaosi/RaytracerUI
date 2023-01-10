@@ -31,4 +31,6 @@
 </template>
 
 <script>
-import HelloWorld from './components/H
+import HelloWorld from './components/HelloWorld';
+
+export default {
