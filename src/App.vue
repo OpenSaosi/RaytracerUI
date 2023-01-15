@@ -39,3 +39,6 @@ export default {
     components: {
         HelloWorld,
     },
+
+    data: () => ({
+   
