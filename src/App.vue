@@ -41,4 +41,9 @@ export default {
     },
 
     data: () => ({
-   
+        //
+    }),
+};
+</script>
+
+<sty
