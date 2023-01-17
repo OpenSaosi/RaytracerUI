@@ -46,4 +46,5 @@ export default {
 };
 </script>
 
-<sty
+<style>
+.v-application--wrap 
