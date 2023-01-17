@@ -47,4 +47,5 @@ export default {
 </script>
 
 <style>
-.v-application--wrap 
+.v-application--wrap {
+    background: #FFFFFF;
