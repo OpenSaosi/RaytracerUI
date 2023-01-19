@@ -49,3 +49,5 @@ export default {
 <style>
 .v-application--wrap {
     background: #FFFFFF;
+}
+</style>
