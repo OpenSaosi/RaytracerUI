@@ -78,3 +78,32 @@
             </v-layout>
 
             <!--<h2 class="headline font-weight-bold mb-3">To be Continued!!</h2>-->
+        </v-flex>
+
+    </v-layout>
+</v-container>
+</template>
+
+<script>
+export default {
+    name: 'HelloWorld',
+
+    data: () => ({
+            broker: null,
+            account: null,
+            instrument: 'EUR/USD',
+            timeFrame: 'TIME_FRAME.M1',
+            indicator: 'sma',
+            template: '1',
+            featuredPic: '/images/template1.png',
+            brokerRules: [
+                v => typeof v == 'undefined' || v == null || v == '' || v.length <= 20 || 'Too many characters.(Limit: 20 characters)'
+            ],
+            accountRules: [
+                v => typeof v == 'undefined' || v == null || v == '' || v.length <= 20 || 'Too many characters.(Limit: 20 characters)'
+            ],
+            instrumentRules: [
+                v => v != '' || 'Instrument is required'
+            ],
+            timeFrameRules: [
+                v => v != '' || 'Time Frame is required'
