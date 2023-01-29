@@ -49,3 +49,32 @@
                         ></v-select>
                         <v-select
                           :items="indicatorNames"
+                          label="Indicator"
+                          v-model="indicator"
+                          :rules="indicatorRules"
+                        ></v-select>
+                        <v-select
+                          :items="templates"
+                          label="Template"
+                          v-model="template"
+                          :rules="templateRules"
+                          @change="changeTemplate"
+                        ></v-select>
+                        <v-img
+                          :src="featuredPic"
+                          height="195"
+                          v-if="featuredPic"
+                          style="margin-bottom:10px"
+                        ></v-img>
+
+                        <v-btn text @click="clearForm()">Reset</v-btn>
+                        <v-btn color="warning" dark @click="generateSourceCode()">Generate</v-btn>
+                    </v-form>
+                </v-card>
+            </v-layout>
+
+            <v-layout justify-center>
+                <editor v-model="sourceCode" @init="editorInit" lang="javascript" theme="chrome" width="1000" height="1000"></editor>
+            </v-layout>
+
+            <!--<h2 class="headline font-weight-bold mb-3">To be Continued!!</h2>-->
