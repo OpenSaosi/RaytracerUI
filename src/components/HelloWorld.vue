@@ -107,3 +107,49 @@ export default {
             ],
             timeFrameRules: [
                 v => v != '' || 'Time Frame is required'
+            ],
+            indicatorRules: [
+                v => v != '' || 'Indicator is required'
+            ],
+            templateRules: [
+                v => v != '' || 'Template is required'
+            ],
+
+            sourceCode: '',
+
+            instrumentNames: [{
+                text: 'EUR/USD',
+                value: 'EUR/USD'
+            }, {
+                text: 'GBP/USD',
+                value: 'GBP/USD'
+            }, {
+                text: 'USD/JPY',
+                value: 'USD/JPY'
+            }],
+
+            timeFrames: [{
+                text: 'M1',
+                value: 'TIME_FRAME.M1'
+            }, {
+                text: 'M5',
+                value: 'TIME_FRAME.M5'
+            }, {
+                text: 'M15',
+                value: 'TIME_FRAME.M15'
+            }, {
+                text: 'M30',
+                value: 'TIME_FRAME.M30'
+            }, {
+                text: 'H1',
+                value: 'TIME_FRAME.H1'
+            }, {
+                text: 'H4',
+                value: 'TIME_FRAME.H4'
+            }],
+
+            indicatorNames: [{
+                text: 'Simple Moving Average',
+                value: 'sma'
+            }, {
+                text: 'Exponential Moving Average',
