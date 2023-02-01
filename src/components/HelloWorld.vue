@@ -153,3 +153,36 @@ export default {
                 value: 'sma'
             }, {
                 text: 'Exponential Moving Average',
+                value: 'ema'
+            }, {
+                text: 'Smoothed Moving Average',
+                value: 'smma'
+            }, {
+                text: 'Linear weighted Moving Average',
+                value: 'lwma'
+            }, {
+                text: 'Relative Strength Index',
+                value: 'rsi'
+            }, {
+                text: 'MACD',
+                value: 'macd'
+            }, {
+                text: 'Non-Indicator',
+                value: 'nonindicator'
+            }],
+            indicatorMap: [],
+            templates: [{
+                text: 'Close Price vs Indicator',
+                value: '1',
+            }, {
+                text: 'Indicator vs Constant Number',
+                value: '2'
+            }, {
+                text: 'Main vs Signal',
+                value: '3'
+            }, {
+                text: 'Candlesticks with the Same Color',
+                value: '4'
+            }],
+            templateMap: [],
+}),
