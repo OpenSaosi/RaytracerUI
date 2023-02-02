@@ -186,3 +186,28 @@ export default {
             }],
             templateMap: [],
 }),
+
+    components: {
+        editor: require('vue2-ace-editor'),
+    },
+    created() {
+        this.init();
+    },
+
+    methods: {
+        init() {
+            this.indicatorMap['sma'] = {
+                name: 'sma',
+                parameters:
+                '   [{ // parameters\n' +
+                '       name: "period",\n' +
+                '       value: 20,\n' +
+                '       required: true,\n' +
+                '       type: PARAMETER_TYPE.INTEGER,\n' +
+                '       range: [1, 100]\n' +
+                '   }],\n',
+                getParameters:
+                '       var period = getEAParameter(context, "period")\n',
+                setParameters:
+                '       [{\n' +
+                '           name: "period",\n' +
