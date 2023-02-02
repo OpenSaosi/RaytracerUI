@@ -211,3 +211,47 @@ export default {
                 setParameters:
                 '       [{\n' +
                 '           name: "period",\n' +
+                '           value: period\n' +
+                '       }])\n',
+            }
+
+            this.indicatorMap['ema'] = {
+                name: 'ema',
+                parameters:
+                '   [{ // parameters\n' +
+                '       name: "period",\n' +
+                '       value: 20,\n' +
+                '       required: true,\n' +
+                '       type: PARAMETER_TYPE.INTEGER,\n' +
+                '       range: [1, 100]\n' +
+                '   }],\n',
+                getParameters:
+                '       var period = getEAParameter(context, "period")\n',
+                setParameters:
+                '       [{\n' +
+                '           name: "period",\n' +
+                '           value: period\n' +
+                '       }])\n',
+            }
+
+            this.indicatorMap['smma'] = {
+                name: 'smma',
+                parameters:
+                '   [{ // parameters\n' +
+                '       name: "period",\n' +
+                '       value: 20,\n' +
+                '       required: true,\n' +
+                '       type: PARAMETER_TYPE.INTEGER,\n' +
+                '       range: [1, 100]\n' +
+                '   }],\n',
+                getParameters:
+                '       var period = getEAParameter(context, "period")\n',
+                setParameters:
+                '       [{\n' +
+                '           name: "period",\n' +
+                '           value: period\n' +
+                '       }])\n',
+            }
+
+            this.indicatorMap['lwma'] = {
+                name: 'lwma',
