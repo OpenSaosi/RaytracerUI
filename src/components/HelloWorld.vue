@@ -255,3 +255,43 @@ export default {
 
             this.indicatorMap['lwma'] = {
                 name: 'lwma',
+                parameters:
+                '   [{ // parameters\n' +
+                '       name: "period",\n' +
+                '       value: 20,\n' +
+                '       required: true,\n' +
+                '       type: PARAMETER_TYPE.INTEGER,\n' +
+                '       range: [1, 100]\n' +
+                '   }],\n',
+                getParameters:
+                '       var period = getEAParameter(context, "period")\n',
+                setParameters:
+                '       [{\n' +
+                '           name: "period",\n' +
+                '           value: period\n' +
+                '       }])\n',
+            }
+
+            this.indicatorMap['rsi'] = {
+                name: 'rsi',
+                parameters:
+                '   [{ // parameters\n' +
+                '       name: "period",\n' +
+                '       value: 14,\n' +
+                '       required: true,\n' +
+                '       type: PARAMETER_TYPE.INTEGER,\n' +
+                '       range: [1, 100]\n' +
+                '   }, {\n' +
+                '       name: "constant",\n' +
+                '       value: 20,\n' +
+                '       required: true,\n' +
+                '       type: PARAMETER_TYPE.INTEGER,\n' +
+                '       range: [1, 100]\n' +
+                '   }],\n',
+                getParameters:
+                '       var period = getEAParameter(context, "period")\n' +
+                '       var constantNum = getEAParameter(context, "constant")\n',
+                setParameters:
+                '       [{\n' +
+                '           name: "period",\n' +
+                '           value: period\n' +
