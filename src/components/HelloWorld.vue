@@ -295,3 +295,34 @@ export default {
                 '       [{\n' +
                 '           name: "period",\n' +
                 '           value: period\n' +
+                '       }])\n',
+            }
+
+            this.indicatorMap['macd'] = {
+                name: 'macd',
+                parameters:
+                '   [{ // parameters\n' +
+                '       name: "fasteEMA",\n' +
+                '       value: 12,\n' +
+                '       required: true,\n' +
+                '       type: PARAMETER_TYPE.INTEGER,\n' +
+                '       range: [1, 100]\n' +
+                '   }, {\n' +
+                '       name: "slowEMA",\n' +
+                '       value: 26,\n' +
+                '       required: true,\n' +
+                '       type: PARAMETER_TYPE.INTEGER,\n' +
+                '       range: [1, 100]\n' +
+                '   }, {\n' +
+                '       name: "signalSMA",\n' +
+                '       value: 9,\n' +
+                '       required: true,\n' +
+                '       type: PARAMETER_TYPE.INTEGER,\n' +
+                '       range: [1, 100]\n' +
+                '   }],\n',
+                getParameters:
+                '       var fasteEMA = getEAParameter(context, "fasteEMA")\n' +
+                '       var slowEMA = getEAParameter(context, "slowEMA")\n' +
+                '       var signalSMA = getEAParameter(context, "signalSMA")\n',
+                setParameters:
+                '       [{\n' +
