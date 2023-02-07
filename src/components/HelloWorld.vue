@@ -326,3 +326,39 @@ export default {
                 '       var signalSMA = getEAParameter(context, "signalSMA")\n',
                 setParameters:
                 '       [{\n' +
+                '           name: "fasteEMA",\n' +
+                '           value: fasteEMA\n' +
+                '       },{\n' +
+                '           name: "slowEMA",\n' +
+                '           value: slowEMA\n' +
+                '       },{\n' +
+                '           name: "signalSMA",\n' +
+                '           value: signalSMA\n' +
+                '       }])\n',
+            }
+
+            this.indicatorMap['nonindicator'] = {
+                name: 'nonindicator',
+                parameters:
+                '   [{ // parameters\n' +
+                '       name: "period",\n' +
+                '       value: 3,\n' +
+                '       required: true,\n' +
+                '       type: PARAMETER_TYPE.INTEGER,\n' +
+                '       range: [1, 100]\n' +
+                '   }],\n',
+                getParameters:
+                '       var period = getEAParameter(context, "period")\n',
+            }
+
+            this.templateMap['1'] = {
+                featuredPic: '/images/template1.png',
+                sourceCode:
+    'registerEA(\n' +
+    '   "sample_using_[indicator]",\n' +
+    '   "A test EA based on [indicator]",\n' +
+        '[parameters]' +
+    '   function (context) { // Init()\n' +
+    '       var account = getAccount(context, 0)\n' +
+    '       var brokerName = [broker]\n' +
+    '       var accountId = [account]\n' +
