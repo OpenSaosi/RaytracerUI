@@ -362,3 +362,30 @@ export default {
     '       var account = getAccount(context, 0)\n' +
     '       var brokerName = [broker]\n' +
     '       var accountId = [account]\n' +
+    '       var symbolName = [instrument]\n' +
+    '       getQuotes(context, brokerName, accountId, symbolName)\n' +
+    '       window.chartHandle = getChartHandle(context, brokerName, accountId, symbolName, [timeFrame])\n' +
+            '[getParameters]' +
+    '       window.indiHandle = getIndicatorHandle(context, brokerName, accountId, symbolName, [timeFrame], "[indicator]",\n' +
+            '[setParameters]' +
+    '   },\n' +
+    '   function(context) { // Deinit()\n' +
+    '       delete window.currTime\n' +
+    '   },\n' +
+    '   function(context) { // OnTick()\n' +
+    '       var arrTime = getData(context, window.chartHandle, DATA_NAME.TIME)\n' +
+    '       if (typeof window.currTime == "undefined") {\n' +
+    '           window.currTime = arrTime[arrTime.length - 1]\n' +
+    '       } else if (window.currTime != arrTime[arrTime.length - 1]) {\n' +
+    '           window.currTime = arrTime[arrTime.length - 1]\n' +
+    '       } else {\n' +
+    '           return\n' +
+    '       }\n' +
+    '       var account = getAccount(context, 0)\n' +
+    '       var brokerName = [account]\n' +
+    '       var accountId = [account]\n' +
+    '       var symbolName = [instrument]\n' +
+    '       var arrClose = getData(context, window.chartHandle, DATA_NAME.CLOSE)\n' +
+    '       var arrIndi = getData(context, window.indiHandle, "[indicator]")\n' +
+    '       var ask = getAsk(context, brokerName, accountId, symbolName)\n' +
+    '       var bid = getBid(context, brokerName, accountId, symbolName)\n' +
