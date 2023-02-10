@@ -389,3 +389,39 @@ export default {
     '       var arrIndi = getData(context, window.indiHandle, "[indicator]")\n' +
     '       var ask = getAsk(context, brokerName, accountId, symbolName)\n' +
     '       var bid = getBid(context, brokerName, accountId, symbolName)\n' +
+    '       var limitPrice = 0.0003\n' +
+    '       var stopPrice = 0.0003\n' +
+    '       var volume = 0.01\n' +
+    '       if (arrClose[arrClose.length - 3] < arrIndi[arrIndi.length - 3] && arrClose[arrClose.length - 2] > arrIndi[arrIndi.length - 2]) {\n' +
+    '           sendOrder(brokerName, accountId, symbolName, ORDER_TYPE.OP_BUYLIMIT, ask - limitPrice, 0, volume, ask + limitPrice, bid - 3 * stopPrice, "", 0, 0)\n' +
+    '       } else if (arrClose[arrClose.length - 3] > arrIndi[arrIndi.length - 3] && arrClose[arrClose.length - 2] < arrIndi[arrIndi.length - 2]) {\n' +
+    '           sendOrder(brokerName, accountId, symbolName, ORDER_TYPE.OP_SELLLIMIT, bid + limitPrice, 0, volume, bid - limitPrice, ask + 3 * stopPrice, "", 0, 0)\n' +
+    '       }\n' +
+    '    }\n' +
+    ')\n'
+            }
+
+            this.templateMap['2'] = {
+                featuredPic: '/images/template2.png',
+                sourceCode:
+    'registerEA(\n' +
+    '   "sample_using_[indicator]",\n' +
+    '   "A test EA based on [indicator]",\n' +
+        '[parameters]' +
+    '   function (context) { // Init()\n' +
+    '       var account = getAccount(context, 0)\n' +
+    '       var brokerName = [broker]\n' +
+    '       var accountId = [account]\n' +
+    '       var symbolName = [instrument]\n' +
+    '       getQuotes(context, brokerName, accountId, symbolName)\n' +
+    '       window.chartHandle = getChartHandle(context, brokerName, accountId, symbolName, [timeFrame])\n' +
+            '[getParameters]' +
+    '       window.indiHandle = getIndicatorHandle(context, brokerName, accountId, symbolName, [timeFrame], "[indicator]",\n' +
+            '[setParameters]' +
+    '   },\n' +
+    '   function(context) { // Deinit()\n' +
+    '       delete window.currTime\n' +
+    '   },\n' +
+    '   function(context) { // OnTick()\n' +
+    '       var arrTime = getData(context, window.chartHandle, DATA_NAME.TIME)\n' +
+    '       if (typeof window.currTime == "undefined") {\n' +
