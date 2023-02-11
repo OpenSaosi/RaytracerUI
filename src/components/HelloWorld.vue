@@ -488,3 +488,46 @@ export default {
     '       var arrMain = getData(context, window.indiHandle, "main")\n' +
     '       var arrSignal = getData(context, window.indiHandle, "signal")\n' +
     '       var ask = getAsk(context, brokerName, accountId, symbolName)\n' +
+    '       var bid = getBid(context, brokerName, accountId, symbolName)\n' +
+    '       var limitPrice = 0.0003\n' +
+    '       var stopPrice = 0.0003\n' +
+    '       var volume = 0.01\n' +
+    '       if (arrMain[arrMain.length - 3] < arrSignal[arrSignal.length - 3] && arrMain[arrMain.length - 2] > arrSignal[arrSignal.length - 2]) {\n' +
+    '           sendOrder(brokerName, accountId, symbolName, ORDER_TYPE.OP_BUYLIMIT, ask - limitPrice, 0, volume, ask + limitPrice, bid - 3 * stopPrice, "", 0, 0)\n' +
+    '       } else if (arrMain[arrMain.length - 3] > arrSignal[arrSignal.length - 3] && arrMain[arrMain.length - 2] < arrSignal[arrSignal.length - 2]) {\n' +
+    '           sendOrder(brokerName, accountId, symbolName, ORDER_TYPE.OP_SELLLIMIT, bid + limitPrice, 0, volume, bid - limitPrice, ask + 3 * stopPrice, "", 0, 0)\n' +
+    '       }\n' +
+    '    }\n' +
+    ')\n'
+            }
+
+            this.templateMap['4'] = {
+                featuredPic: '/images/template4.png',
+                sourceCode:
+    'registerEA(\n' +
+    '   "sample_using_[indicator]",\n' +
+    '   "A test EA based on [indicator]",\n' +
+        '[parameters]' +
+    '   function (context) { // Init()\n' +
+    '       var account = getAccount(context, 0)\n' +
+    '       var brokerName = [broker]\n' +
+    '       var accountId = [account]\n' +
+    '       var symbolName = [instrument]\n' +
+    '       getQuotes(context, brokerName, accountId, symbolName)\n' +
+    '       window.chartHandle = getChartHandle(context, brokerName, accountId, symbolName, [timeFrame])\n' +
+    '   },\n' +
+    '   function(context) { // Deinit()\n' +
+    '       delete window.currTime\n' +
+    '   },\n' +
+    '   function(context) { // OnTick()\n' +
+    '       var arrTime = getData(context, window.chartHandle, DATA_NAME.TIME)\n' +
+    '       if (typeof window.currTime == "undefined") {\n' +
+    '           window.currTime = arrTime[arrTime.length - 1]\n' +
+    '       } else if (window.currTime != arrTime[arrTime.length - 1]) {\n' +
+    '           window.currTime = arrTime[arrTime.length - 1]\n' +
+    '       } else {\n' +
+    '           return\n' +
+    '       }\n' +
+    '       var account = getAccount(context, 0)\n' +
+    '       var brokerName = [account]\n' +
+    '       var accountId = [account]\n' +
