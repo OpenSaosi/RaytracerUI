@@ -531,3 +531,31 @@ export default {
     '       var account = getAccount(context, 0)\n' +
     '       var brokerName = [account]\n' +
     '       var accountId = [account]\n' +
+    '       var symbolName = [instrument]\n' +
+            '[getParameters]' +
+    '       var arrClose = getData(context, window.chartHandle, DATA_NAME.CLOSE)\n' +
+    '       var arrOpen = getData(context, window.chartHandle, DATA_NAME.OPEN)\n' +
+    '       var ask = getAsk(context, brokerName, accountId, symbolName)\n' +
+    '       var bid = getBid(context, brokerName, accountId, symbolName)\n' +
+    '       var limitPrice = 0.0003\n' +
+    '       var stopPrice = 0.0003\n' +
+    '       var volume = 0.01\n' +
+    '       var buyOrSell = "neither"\n' +
+    '       for (var i = 1; i <= period; i++) {\n' +
+    '           if (arrClose[arrClose.length - i] - arrOpen[arrOpen.length - i] > 0 && (buyOrSell == "buy" || i == 1)) {\n' +
+    '               buyOrSell = "buy"\n' +
+    '           } else if (arrClose[arrClose.length - i] - arrOpen[arrOpen.length - i] < 0 && (buyOrSell == "sell" || i == 1)) {\n' +
+    '               buyOrSell = "sell"\n' +
+    '           } else {\n' +
+    '               buyOrSell = "neither"\n' +
+    '               break\n' +
+    '           }\n' +
+    '       }\n' +
+    '       if (buyOrSell == "buy") {\n' +
+    '           sendOrder(brokerName, accountId, symbolName, ORDER_TYPE.OP_BUYLIMIT, ask - limitPrice, 0, volume, ask + limitPrice, bid - 3 * stopPrice, "", 0, 0)\n' +
+    '       } else if (buyOrSell == "sell") {\n' +
+    '           sendOrder(brokerName, accountId, symbolName, ORDER_TYPE.OP_SELLLIMIT, bid + limitPrice, 0, volume, bid - limitPrice, ask + 3 * stopPrice, "", 0, 0)\n' +
+    '       }\n' +
+    '    }\n' +
+    ')\n'
+            }
