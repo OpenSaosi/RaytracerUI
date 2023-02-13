@@ -559,3 +559,28 @@ export default {
     '    }\n' +
     ')\n'
             }
+
+        },
+        clearForm() {
+            this.broker = null;
+            this.account = null;
+            this.$refs.form.reset();
+            this.instrument = 'EUR/USD';
+            this.timeFrame = 'TIME_FRAME.M1';
+            this.indicator = 'sma';
+            this.template = '1';
+            this.featuredPic = '/images/template1.png';
+        },
+        editorInit() {
+            require('brace/ext/language_tools') //language extension prerequsite...
+            require('brace/mode/html')
+            require('brace/mode/javascript') //language
+            require('brace/mode/less')
+            require('brace/theme/chrome')
+            require('brace/snippets/javascript') //snippet
+        },
+        changeTemplate(v) {
+            this.featuredPic = this.templateMap[v].featuredPic;
+        },
+        generateSourceCode() {
+            let broker = !this.broker ? 'getBrokerNameOfAccount(account)' : '"' + this.broker + '"';
