@@ -584,3 +584,22 @@ export default {
         },
         generateSourceCode() {
             let broker = !this.broker ? 'getBrokerNameOfAccount(account)' : '"' + this.broker + '"';
+            let account = !this.account ? 'getAccountIdOfAccount(account)' : '"' + this.account + '"';
+            let instrument = '"' + this.instrument + '"';
+            let timeFrame = this.timeFrame;
+            let indicator = this.indicatorMap[this.indicator];
+            let sourceCode = this.templateMap[this.template].sourceCode;
+
+            this.sourceCode = sourceCode
+                .replace(/\[broker\]/g, broker)
+                .replace(/\[account\]/g, account)
+                .replace(/\[instrument\]/g, instrument)
+                .replace(/\[timeFrame\]/g, timeFrame)
+                .replace(/\[indicator\]/g, indicator.name)
+                .replace(/\[parameters\]/g, indicator.parameters)
+                .replace(/\[getParameters\]/g, indicator.getParameters)
+                .replace(/\[setParameters\]/g, indicator.setParameters);
+        }
+    },
+};
+</script>
