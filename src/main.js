@@ -1,1 +1,2 @@
-import Vue 
+import Vue from 'vue'
+import App from './A
