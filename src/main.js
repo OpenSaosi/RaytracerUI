@@ -1,2 +1,4 @@
 import Vue from 'vue'
-import App from './A
+import App from './App.vue'
+import router from './router'
+im
