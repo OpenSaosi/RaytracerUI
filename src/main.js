@@ -5,4 +5,6 @@ import store from './store'
 import vuetify from './plugins/vuetify';
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
-Vue
+Vue.config.productionTip = false
+
+ne
