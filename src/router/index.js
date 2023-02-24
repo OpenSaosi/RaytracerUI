@@ -1,2 +1,3 @@
 import Vue from 'vue'
-import VueRouter from 'vue-rou
+import VueRouter from 'vue-router'
+import Home from '.
