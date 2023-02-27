@@ -8,4 +8,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    com
+    component: Home
+  },
+  {
+    path: '/abou
