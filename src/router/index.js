@@ -11,4 +11,6 @@ const routes = [
     component: Home
   },
   {
-    path: '/abou
+    path: '/about',
+    name: 'about',
+    // ro
