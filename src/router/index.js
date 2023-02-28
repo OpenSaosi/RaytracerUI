@@ -13,4 +13,5 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    // ro
+    // route level code-splitting
+    // this
