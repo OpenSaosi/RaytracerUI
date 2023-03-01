@@ -14,4 +14,4 @@ const routes = [
     path: '/about',
     name: 'about',
     // route level code-splitting
-    // this
+    // this generates a separate chunk (about.[hash].
