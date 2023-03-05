@@ -20,4 +20,5 @@ const routes = [
   }
 ]
 
-const router = n
+const router = new VueRouter({
+  mode: 'hist
