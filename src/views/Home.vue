@@ -1,3 +1,3 @@
 <template>
   <div class="home">
-    <img alt="F
+    <img alt="Fintechee logo" src="../assets
