@@ -5,4 +5,6 @@
   </div>
 </template>
 
-<scr
+<script>
+// @ is an alias to /src
+import
