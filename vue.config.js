@@ -1,2 +1,3 @@
 const vueConfig = {
-  
+    "transpileDependencies": [
+      "vuetif
