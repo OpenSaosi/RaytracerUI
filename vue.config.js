@@ -2,4 +2,6 @@ const vueConfig = {
     "transpileDependencies": [
       "vuetify"
     ],
-     publicPath: 
+     publicPath: "./" // "https://www.nonmql.com/"
+};
+
