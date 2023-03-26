@@ -5,4 +5,5 @@ const vueConfig = {
      publicPath: "./" // "https://www.nonmql.com/"
 };
 
-if (process.env.NODE_ENV === 'pr
+if (process.env.NODE_ENV === 'production') {
+  vueConfig.cha
