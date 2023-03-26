@@ -6,4 +6,5 @@ const vueConfig = {
 };
 
 if (process.env.NODE_ENV === 'production') {
-  vueConfig.cha
+  vueConfig.chainWebpack = (config) => {
+    conf
