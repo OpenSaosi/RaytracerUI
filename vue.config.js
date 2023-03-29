@@ -7,4 +7,4 @@ const vueConfig = {
 
 if (process.env.NODE_ENV === 'production') {
   vueConfig.chainWebpack = (config) => {
-    conf
+    config.plugin('html').init((P
