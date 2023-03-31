@@ -8,4 +8,6 @@ const vueConfig = {
 if (process.env.NODE_ENV === 'production') {
   vueConfig.chainWebpack = (config) => {
     config.plugin('html').init((Plugin, args) => {
-      const ne
+      const newArgs = {
+        ...args[0],
+      
