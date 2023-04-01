@@ -11,4 +11,5 @@ if (process.env.NODE_ENV === 'production') {
       const newArgs = {
         ...args[0],
       };
-      newArgs.minify.removeA
+      newArgs.minify.removeAttributeQuotes = false;
+      return ne
