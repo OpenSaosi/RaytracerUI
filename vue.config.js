@@ -12,4 +12,6 @@ if (process.env.NODE_ENV === 'production') {
         ...args[0],
       };
       newArgs.minify.removeAttributeQuotes = false;
-      return ne
+      return new Plugin(newArgs);
+    });
+  };
