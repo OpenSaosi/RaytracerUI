@@ -15,3 +15,6 @@ if (process.env.NODE_ENV === 'production') {
       return new Plugin(newArgs);
     });
   };
+}
+
+module.exports = vueConfig;
